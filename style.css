@@ -35,7 +35,7 @@ html {
 }
 @media only screen and (max-width: 25em) {
   html {
-    font-size: 35%;
+    font-size: 40%;
   }
 }
 
@@ -166,6 +166,11 @@ img {
   display: flex;
   /* width: 21rem;
   justify-content: space-around; */
+}
+@media only screen and (max-width: 25em) {
+  .dots {
+    bottom: 0;
+  }
 }
 
 .dots__dot {
@@ -519,7 +524,7 @@ img {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem 2rem;
+  gap: 6rem 2rem;
   align-content: center;
   justify-content: center;
   align-items: start;
@@ -549,10 +554,18 @@ h1 {
 h4 {
   font-size: 2.4rem;
   font-weight: 500;
+  line-height: 1.5;
 }
 
 .header__title--heading {
   padding: 0 2rem;
+}
+@media only screen and (max-width: 25em) {
+  .header__title--heading {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
 
 .header__title--buttons {

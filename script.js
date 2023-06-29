@@ -42,7 +42,6 @@ document.addEventListener('keydown', function (e) {
 //////////////////////////////////////
 // implementing smooth scrolling/////////
 btnscrollto.addEventListener('click', function (e) {
-  console.log(e.target);
   section1.scrollIntoView({
     behavior: 'smooth',
   });
