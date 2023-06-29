@@ -1,5 +1,7 @@
 'use strict';
 
+// const { click } = require('@testing-library/user-event/dist/click');
+
 ///////////////////////////////////////
 // Modal window
 
@@ -51,16 +53,30 @@ btnscrollto.addEventListener('click', function (e) {
 // using event delegation to implement the smooth scrolling on the page navigation
 // 1. attach an event hadler to the common parent element
 // 2. determine which element initiate the click
+// const navLinks = document.querySelector('.nav__links');
+
+// function handlClick(e) {
+//   if (e.target.classList.contains('nav__link')) {
+//     e.preventDefault();
+//     const id = e.target.getAttribute('href');
+//     document.querySelector(id).scrollIntoView({
+//       behavior: 'smooth',
+//     });
+//   }
+// }
+// navLinks.addEventListener(`click`, handlClick);
+
 document.querySelector('.nav__links').addEventListener('click', function (e) {
-  e.preventDefault();
   //matching strategy
   if (e.target.classList.contains('nav__link')) {
+    e.preventDefault();
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({
       behavior: 'smooth',
     });
   }
 });
+
 ///////////////////////////
 //building tabbed components
 // const tabs = document.querySelectorAll('.operations__tab');
