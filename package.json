@@ -1,0 +1,14 @@
+{
+  "name": "banksit-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass sass/main.scss style.css -w",
+    "live": "live-server",
+    "run-all": "npm-run-all -p compile:sass live"
+  },
+  "author": "paskkal.io",
+  "license": "ISC"
+}
